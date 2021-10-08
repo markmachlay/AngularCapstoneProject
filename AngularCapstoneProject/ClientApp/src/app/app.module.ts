@@ -32,6 +32,7 @@ import { PerformersComponent } from './performers/performers.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'events', component: EventsComponent },
     ])
   ],
   providers: [],
