@@ -1,1 +1,10 @@
-<p>add-event works!</p>
+<h2>Add Event</h2>
+
+<form>
+  <label>Event Name</label>
+  <input type="text" class="form-control" id="EventName" #EventName/>
+  <label>Event Date</label>
+  <input type="datetime-local" class="form-control" id="EventDate" #EventDate/>
+
+  <button class="btn-primary" (click)="addEvent(EventName.value, EventDate.value)">Submit Event</button>
+</form>
