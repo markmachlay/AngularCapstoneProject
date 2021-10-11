@@ -47,7 +47,7 @@ namespace AngularCapstoneProject.Models
 
             modelBuilder.Entity<Event>(entity =>
             {
-                entity.Property(e => e.EventId).ValueGeneratedNever();
+                entity.Property(e => e.EventId);
 
                 entity.Property(e => e.Admission).HasColumnType("money");
 
