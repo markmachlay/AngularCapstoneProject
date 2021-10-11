@@ -1,0 +1,22 @@
+<p>events works!</p>
+
+<p *ngIf="!events"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="events">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Event Name</th>
+      <th>Date</th>
+      <th>Admission Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let event of events">
+      <td>{{ event.eventId }}</td>
+      <td>{{ event.eventName }}</td>
+      <td>{{ event.eventDate }}</td>
+      <td>{{ event.admission }}</td>
+    </tr>
+  </tbody>
+</table>
