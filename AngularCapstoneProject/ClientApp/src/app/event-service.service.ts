@@ -9,12 +9,15 @@ import { Events } from './Models/Events';
 export class EventServiceService {
 
   apiUrl: string = "https://localhost:44323/api/Events";
+
   constructor(private httpClient: HttpClient) { }
 
-  getEvents() : Observable<Events[]> {
+  getEvents() {
     return this.httpClient.get<Events[]>(this.apiUrl);
   }
 
-  postEvent(events: Events) : Observable<Events> {    return this.httpClient.post<Events>(this.apiUrl, event);
+  postEvent(event: Events): Observable<Events> {
+    return this.httpClient.post<Events>(this.apiUrl, event);
   }
-}
+
+  }

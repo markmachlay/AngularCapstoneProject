@@ -6,13 +6,14 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace AngularCapstoneProject.Models
 {
-   
     public partial class AngularContext : DbContext
     {
 
         private readonly string _connectionString;
-        public AngularContext(DbSet<Event> events, DbSet<Favorite> favorites, DbSet<Performer> performers)
+
+        public AngularContext(string connectionString, DbSet<Event> events, DbSet<Favorite> favorites, DbSet<Performer> performers)
         {
+            _connectionString = connectionString;
             Events = events;
             Favorites = favorites;
             Performers = performers;
@@ -46,7 +47,7 @@ namespace AngularCapstoneProject.Models
 
             modelBuilder.Entity<Event>(entity =>
             {
-                entity.Property(e => e.EventId).ValueGeneratedNever();
+                entity.Property(e => e.EventId);
 
                 entity.Property(e => e.Admission).HasColumnType("money");
 

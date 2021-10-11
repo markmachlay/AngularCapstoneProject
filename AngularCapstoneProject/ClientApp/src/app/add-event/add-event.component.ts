@@ -15,28 +15,22 @@ export class AddEventComponent implements OnInit {
   ngOnInit() {
   }
 
-  addEvent(eventName: string, eventDate: Date) {
+  addEvent(eventName: string,
+    eventDate: Date,
+    admission: number,
+    details: any)
+  {
+
     let event = new Events();
-    console.log(eventName);
-    console.log(eventDate);
     event.eventName = eventName;
     event.eventDate = eventDate;
+    event.admission = admission;
+    event.details = details;
 
-    this.eventService.postEvent(event).subscribe(result =>
-    {
-      console.log(result);
-    //}, (error: Response) =>
-    //{
-    //  if (error.status === 404) {
-    //    console.log('Not found');
-    //    alert('Not found');
-    //  }
-
-    //  if (error.status === 500) {
-
-    //  }
-    //  console.log(error.json);
-    });
+    this.eventService.postEvent(event)
+      .subscribe(result => {
+        console.log(result)
+      });
   }
 
 }

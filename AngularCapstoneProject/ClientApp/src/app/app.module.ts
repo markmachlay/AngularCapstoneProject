@@ -35,7 +35,7 @@ import { AddEventComponent } from './add-event/add-event.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'events', component: EventsComponent },
-      { path: 'add-event', component: AddEventComponent },
+      { path: 'add-event', component: AddEventComponent }
     ])
   ],
   providers: [],
