@@ -1,10 +1,14 @@
 <h2>Add Event</h2>
 
 <form>
+  <label>Event Id</label>
+  <input type="number" class="form-control" id="EventId" #EventId >
   <label>Event Name</label>
   <input type="text" class="form-control" id="EventName" #EventName/>
   <label>Event Date</label>
   <input type="datetime-local" class="form-control" id="EventDate" #EventDate/>
+  <label>Admission Price</label>
+  <input type="number" class="form-control" id="Admission" #Admission/>
 
   <button class="btn-primary" (click)="addEvent(EventName.value, EventDate.value)">Submit Event</button>
 </form>
