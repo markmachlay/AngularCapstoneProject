@@ -16,6 +16,8 @@ namespace AngularCapstoneProject.Models
         public string EventName { get; set; }
         public DateTime? EventDate { get; set; }
         public decimal? Admission { get; set; }
+        public string Details { get; set; }
+
 
         public virtual ICollection<Favorite> Favorites { get; set; }
     }
