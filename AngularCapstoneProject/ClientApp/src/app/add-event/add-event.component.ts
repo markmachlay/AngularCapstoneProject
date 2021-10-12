@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EventServiceService } from '../event-service.service';
 import { Events } from '../Models/Events';
 
@@ -9,7 +10,7 @@ import { Events } from '../Models/Events';
 })
 export class AddEventComponent implements OnInit {
 
-  constructor(private eventService: EventServiceService) { }
+  constructor(private eventService: EventServiceService, private router : Router) { }
 
   ngOnInit() {
   }
@@ -30,6 +31,8 @@ export class AddEventComponent implements OnInit {
       .subscribe(result => {
         console.log(result)
       });
+
+    this.router.navigateByUrl('/events')
   }
 
 }
