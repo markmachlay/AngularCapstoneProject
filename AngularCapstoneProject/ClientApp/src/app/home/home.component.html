@@ -1,1 +1,43 @@
-<h1 style="color:red;">Music Mausoleum</h1><h2 style="color:red;">Where the music never dies!</h2><img src="assets/SkeletonBand.jpg" alt="Skull in headphones" style="width:100%; height:100%;"><h3 style="color:red;">Who Dares to Enter?</h3><div class="radio">  <label>    <input type="radio" name="user" value="Morticia" [checked]='true' ngModel />    Morticia  </label></div><div class="radio">  <label>    <input type="radio" name="user" value="Facilier" [checked]='true' ngModel />    Dr. Facilier  </label></div><div class="radio">  <label>    <input type="radio" name="user" value="VFrank" [checked]='true' ngModel />    Victor Frankenstein  </label></div><div class="radio">  <label>    Enter your name (since you aren't cool enough to be on the guest list)    <!--<input type="radio" name="user" value="input" [checked]='true' ngModel />-->    <input type="text" class=" form-control" id="user" name="user" #user />  </label><br />  <button class="btn-primary btn" (click)="get($Events)">Enter</button></div>
+<body style="background-color:#282128;">
+
+  <style>
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+   
+  </style>
+
+  <h1 style="text-align:center; color:red;">Music Mausoleum</h1>
+  <h2 style="text-align: center; color: red;">Where the music never dies!</h2>
+
+
+  <img src="assets/SkeletonBand.jpg" alt="Skeleton Band" class="center" style="width:50%; height:50%;">
+  <h3 style="text-align: center; color: red;">Who Dares to Enter?</h3>
+
+
+  <li style="text-align:center" class="nav-item" [routerLinkActive]="['link-active']">
+    <a class="nav-link text-light" [routerLink]="['/events']">MORTICIA</a>
+  </li>
+  <img src="assets/MorticiaRose.jpg" alt="Morticia with Rose" class="center" style="width:15%; height:15%;">
+
+  <li style="text-align:center" class="nav-item" [routerLinkActive]="['link-active']">
+    <a class="nav-link text-light" [routerLink]="['/events']">DR.FACILIER</a>
+  </li>
+  <img src="assets/Dr_Facilier.jpg" alt="Dr.Facilier" class="center" style="width:15%; height:15%;">
+
+
+  <li style="text-align:center" class="nav-item" [routerLinkActive]="['link-active']">
+    <a class="nav-link text-light" [routerLink]="['/events']">VICTOR FRANKENSTEIN</a>
+  </li>
+  <img src="assets/frankenstein-and-monster.jpg" alt="frankenstein-and-monster" class="center" style="width:15%; height:15%;">
+
+
+  <li style="text-align:center" class="nav-item" [routerLinkActive]="['link-active']">
+    <a class="nav-link text-light" [routerLink]="['/events']">LYDIA DEETZ</a>
+  </li>
+  <img src="assets/Lydia Deetz.jpg" alt="Lydia Deetz" class="center" style="width:10%; height:10%;">
+
+</body>
