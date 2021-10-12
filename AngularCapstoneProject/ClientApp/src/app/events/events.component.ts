@@ -11,12 +11,24 @@ import { Events } from '../Models/Events';
 
 export class EventsComponent implements OnInit {
 
+  //eventTitle!: string;
+  //eventDetails!: string;
+  events!: Events[];
 
-  events: Events[];
+  //currentEvent: Events = {
+  //  eventId: 0,
+  //  eventName: '',
+  //  eventDate: ,
+  //  admission: 0,
+  //  details: '',
+  //}
   constructor(private eventService: EventServiceService) { }
 
   ngOnInit() {
     this.eventService.getEvents().subscribe(result => { this.events = result; })
   }
 
+  formatDetails() {
+
+  }
 }
