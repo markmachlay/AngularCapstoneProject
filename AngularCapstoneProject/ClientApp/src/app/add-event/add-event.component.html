@@ -1,1 +1,17 @@
-<p>add-event works!</p>
+<h2>Add Event</h2>
+
+<form>
+  <label>Event Name</label>
+  <input type="text" class="form-control" id="EventName" name="EventName" #EventName />
+
+  <label>Event Date</label>
+  <input type="text" class="form-control" id="EventDate" name="EventDate" #EventDate />
+
+  <label>Admission</label>
+  <input type="text" class="form-control" id="Admission" name="Admission" #Admission />
+
+  <label>Details</label>
+  <input type="text" class="form-control" style="margin-bottom:5px" id="Details" name="Details" #Details />
+
+  <button class="btn-primary btn" (click)="addEvent(EventName.value, EventDate.value, Admission.value, Details.value)">Submit</button>
+</form>
