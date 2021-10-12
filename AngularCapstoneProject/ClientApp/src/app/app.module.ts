@@ -13,6 +13,7 @@ import { EventsComponent } from './events/events.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { PerformersComponent } from './performers/performers.component';
 import { AddEventComponent } from './add-event/add-event.component';
+import { EventDetailsComponent } from './event-details/event-details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AddEventComponent } from './add-event/add-event.component';
     EventsComponent,
     FavoritesComponent,
     PerformersComponent,
-    AddEventComponent
+    AddEventComponent,
+    EventDetailsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

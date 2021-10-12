@@ -9,7 +9,17 @@ import { Events } from '../Models/Events';
 })
 export class EventsComponent implements OnInit {
 
-  events: Events[];
+  //eventTitle!: string;
+  //eventDetails!: string;
+  events!: Events[];
+
+  //currentEvent: Events = {
+  //  eventId: 0,
+  //  eventName: '',
+  //  eventDate: ,
+  //  admission: 0,
+  //  details: '',
+  //}
   constructor(private eventService: EventServiceService) { }
 
   ngOnInit() {
