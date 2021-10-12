@@ -6,18 +6,18 @@
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="events">
   <thead>
     <tr>
-      <th>Event ID</th>
+      <th>Id</th>
       <th>Event Name</th>
-      <th>Event Date</th>
-      <th>Admission</th>
+      <th>Date</th>
+      <th>Admission Price</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let event of events">
-      <td>{{events.eventId}}</td>
-      <td>{{ events.eventName }}</td>
-      <td>{{ events.eventDate}}</td>
-      <td>{{ events.admission}}</td>
+      <td>{{ event.eventId }}</td>
+      <td>{{ event.eventName }}</td>
+      <td>{{ event.eventDate }}</td>
+      <td>{{ event.admission }}</td>
     </tr>
   </tbody>
 </table>

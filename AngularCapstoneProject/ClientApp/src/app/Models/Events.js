@@ -7,4 +7,4 @@ var Event = /** @class */ (function () {
     return Event;
 }());
 exports.Event = Event;
-//# sourceMappingURL=Events.js.map
+//# sourceMappingURL=Event.js.map
