@@ -18,6 +18,7 @@ namespace AngularCapstoneProject.Models
         public decimal? Admission { get; set; }
         public string Details { get; set; }
 
+
         public virtual ICollection<Favorite> Favorites { get; set; }
     }
 }

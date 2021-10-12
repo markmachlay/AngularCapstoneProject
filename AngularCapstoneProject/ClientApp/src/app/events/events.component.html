@@ -1,5 +1,3 @@
-<p>events works!</p>
-
 <p *ngIf="!events"><em>Loading...</em></p>
 
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="events">
@@ -17,6 +15,8 @@
       <td>{{ event.eventName }}</td>
       <td>{{ event.eventDate }}</td>
       <td>{{ event.admission }}</td>
+      <td><details>{{ event.details }}</details></td>
+      <td><button onclick="addFavorite()">Add To Favorites</button></td>
     </tr>
   </tbody>
 </table>

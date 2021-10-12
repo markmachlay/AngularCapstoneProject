@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+
 namespace AngularCapstoneProject
 {
     public class Startup
@@ -23,9 +24,8 @@ namespace AngularCapstoneProject
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<AngularContext>(options => options.UseSqlServer(connectionString));
-
             services.AddControllersWithViews();
+            services.AddDbContext<AngularContext>(options => options.UseSqlServer(connectionString));
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
