@@ -41,6 +41,7 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\Models\Events.ts" />
+    <None Remove="ClientApp\src\app\Models\Favorites.ts" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,27 +1,25 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { EventServiceService } from './event-service.service';
 import { Events } from './Models/Events';
 import { Favorites } from './Models/Favorites';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EventServiceService {
+export class FavoritesService {
 
-  apiUrl: string = "https://localhost:44323/api/Events";
+  //apiUrl: string = "https://localhost:44323/api/Events";
   favApiUrl: string = "https://localhost:44323/api/Favorites";
-
+  //userFavorites: Favorites[];
   constructor(private httpClient: HttpClient) { }
 
-  getEvents() {
-    return this.httpClient.get<Events[]>(this.apiUrl);
+  getFavorites() {
+    return this.httpClient.get<Favorites[]>(this.favApiUrl);
   }
 
-  postEvent(event: Events): Observable<Events> {
-    return this.httpClient.post<Events>(this.apiUrl, event);
-  }
-
+  //getUserFavs(id: number) {
   
-
-  }
+  //  if (id === )
+  //}
+}

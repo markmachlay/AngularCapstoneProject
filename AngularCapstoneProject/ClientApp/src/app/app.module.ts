@@ -37,7 +37,7 @@ import { AddEventComponent } from './add-event/add-event.component';
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'events', component: EventsComponent },
       { path: 'add-event', component: AddEventComponent },
-      { path: 'favorites', component: FavoritesComponent }
+      { path: 'favorites/:id', component: FavoritesComponent }
     ])
   ],
   providers: [],
