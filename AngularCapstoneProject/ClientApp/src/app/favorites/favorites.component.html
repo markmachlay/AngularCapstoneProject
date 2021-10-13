@@ -1,1 +1,24 @@
-<p>favorites works!</p>
+<body style="background-color: indianred;">
+
+  <p *ngIf="!favorites"><em>Loading...</em></p>
+
+  <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="favorites">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Event Name</th>
+        <th>Date</th>
+        <th>Admission Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let favorite of favorites">
+        <td>{{ favorite.favoriteId }}</td>
+        <td>{{ favorite.userId }}</td>
+        <td>{{ favorite.eventId }}</td>
+        <td>{{ event.admission }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
