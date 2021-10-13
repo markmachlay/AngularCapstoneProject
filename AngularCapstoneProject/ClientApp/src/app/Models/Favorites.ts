@@ -4,5 +4,5 @@ export class Favorites {
   favoriteId: number;
   userId: number;
   eventId: number;
-  //event: Events;
+  event: Events;
 }

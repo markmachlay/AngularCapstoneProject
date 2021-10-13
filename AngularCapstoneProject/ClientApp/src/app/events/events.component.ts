@@ -28,6 +28,7 @@ export class EventsComponent implements OnInit {
     this.eventService.getEvents().subscribe(result => { this.events = result; })
   }
 
+
   formatDetails() {
 
   }
