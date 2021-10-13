@@ -13,6 +13,7 @@ import { EventsComponent } from './events/events.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { PerformersComponent } from './performers/performers.component';
 import { AddEventComponent } from './add-event/add-event.component';
+import { AddFavoriteComponent } from './add-favorite/add-favorite.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AddEventComponent } from './add-event/add-event.component';
     EventsComponent,
     FavoritesComponent,
     PerformersComponent,
-    AddEventComponent
+    AddEventComponent,
+    AddFavoriteComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -37,7 +39,7 @@ import { AddEventComponent } from './add-event/add-event.component';
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'events', component: EventsComponent },
       { path: 'add-event', component: AddEventComponent },
-      { path: 'favorites', component: FavoritesComponent }
+      { path: 'favorites/:id', component: FavoritesComponent }
     ])
   ],
   providers: [],
