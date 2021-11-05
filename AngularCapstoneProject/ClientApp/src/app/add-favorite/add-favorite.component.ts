@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FavoritesService } from '../favorites.service';
 import { Favorites } from '../Models/Favorites';
 
 @Component({
@@ -8,7 +9,7 @@ import { Favorites } from '../Models/Favorites';
 })
 export class AddFavoriteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private favoriteService: FavoritesService) { }
 
   ngOnInit() {
   }
@@ -16,7 +17,13 @@ export class AddFavoriteComponent implements OnInit {
 
   addFavorite(eventId: number, userId: number) {
     let favorite = new Favorites();
+    favorite.eventId = eventId;
+    favorite.userId = userId;
 
+    this.favoriteService.postFavorite(favorite)
+      .subscribe(result => {
+        console.log(result)
+      });
   }
 
 }
